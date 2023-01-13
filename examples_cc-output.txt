@@ -1,0 +1,63 @@
+Test results:
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305018972893289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:2:9
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+1	## Testing Simple Variable Assignments 
+2	cc0000 = "4305018972893289"    # valid CC
+3	cc0001 = "0005019902565682"    # invalid CC
+
+--------------------------------------------------
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305-0189-7289-3289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:4:9
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+3	cc0001 = "0005019902565682"    # invalid CC
+4	cc0002 = "4305-0189-7289-3289" # valid CC
+5	cc0002 = "4305 0189 7289 3289" # valid CC
+
+--------------------------------------------------
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305 0189 7289 3289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:5:9
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+4	cc0002 = "4305-0189-7289-3289" # valid CC
+5	cc0002 = "4305 0189 7289 3289" # valid CC
+6	
+7	# Testing Dictionary
+8	dict = {}
+
+--------------------------------------------------
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305 0189 7289 3289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:9:10
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+8	dict = {}
+9	dict[0] = "4305 0189 7289 3289" # valid CC
+10	dict[1] = "0005019902565682"    # invalid CC
+
+--------------------------------------------------
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305 0189 7289 3289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:14:10
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+13	cc = ""
+14	if (cc == "4305 0189 7289 3289"):
+15	  print(success)
+
+--------------------------------------------------
+>> Issue: [B142:hardcoded_creditcard_string] Possible hardcoded CreditCard Number: '4305018972893289' found in string literal '4305 0189 7289 3289' 
+   Severity: Medium   Confidence: Medium
+   CWE: 
+   Location: /home/brucker/examples_cc.py:18:4
+   More Info: https://bandit.readthedocs.io/en/1.7.4/plugins/b142_hardcoded_creditcard_string.html
+17	  print(success)
+18	if ("4305 0189 7289 3289" == cc):
+19	  print(success)
+
+--------------------------------------------------

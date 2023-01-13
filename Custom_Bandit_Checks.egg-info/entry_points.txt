@@ -1,0 +1,3 @@
+[bandit.plugins]
+stuff = creditcard.hardcoded_cc:hardcoded_creditcard_string
+
